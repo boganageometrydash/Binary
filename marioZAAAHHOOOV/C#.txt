@@ -1,0 +1,84 @@
+за да не губим време с теория, ето най-важните C# примери, обхващащи основата на езика. 
+1. Hello World & Вход от потребителя 
+Най-базовият синтаксис за четене и писане в конзолата:
+csharp
+using System;
+
+public class Program {
+    public static void Main() {
+        Console.WriteLine("Как се казваш?");
+        string name = Console.ReadLine(); // Чете низ
+        Console.WriteLine($"Здравей, {name}!"); // Стрингова интерполация
+    }
+}
+Използвайте кода внимателно.
+
+2. Типове данни и Масиви
+C# е строго типизиран. Ето как дефинираме списъци и масиви: 
+csharp
+int age = 25;
+double price = 19.99;
+bool isCoding = true;
+
+// Масив с фиксирана дължина
+string[] cars = { "Volvo", "BMW", "Tesla" };
+
+// Динамичен списък (изисква using System.Collections.Generic;)
+List<int> numbers = new List<int> { 1, 2, 3 };
+numbers.Add(4);
+Използвайте кода внимателно.
+
+3. Условни конструкции и Цикли
+Класическата логика, която ще ползвате постоянно:
+csharp
+int score = 85;
+
+if (score >= 90) {
+    Console.WriteLine("Отличен");
+} else {
+    Console.WriteLine("Добър опит");
+}
+
+// Foreach цикъл - най-лесният начин за обхождане
+foreach (string car in cars) {
+    Console.WriteLine(car);
+}
+Използвайте кода внимателно.
+
+4. Класове и Обектно-ориентирано програмиране (ООП)
+C# е изграден около класовете. Ето един бърз пример за клас с конструктор и свойство:
+csharp
+public class Robot {
+    public string Model { get; set; } // Property
+
+    public Robot(string model) {     // Constructor
+        Model = model;
+    }
+
+    public void SayHello() {
+        Console.WriteLine($"Биип-бооп! Аз съм модел {Model}.");
+    }
+}
+
+// Употреба:
+Robot myRobot = new Robot("T-1000");
+myRobot.SayHello();
+Използвайте кода внимателно.
+
+5. LINQ (Езикови заявки) 
+Една от най-силните черти на C# за филтриране на данни: 
+csharp
+using System.Linq;
+
+int[] nums = { 1, 5, 8, 12, 15, 20 };
+// Намираме всички числа по-големи от 10
+var bigNums = nums.Where(n => n > 10); 
+
+Console.WriteLine(string.Join(", ", bigNums)); // Изход: 12, 15, 20
+Използвайте кода внимателно.
+
+Ресурси за напреднали:
+Интерактивни уроци в Microsoft Learn за C#.
+Тестване на код директно в браузъра чрез .NET Fiddle.
+Примери и документация в W3Schools C# Tutorial. 
+Искате ли да видите пример за нещо по-специфично, като работа с файлове, Async/Await или може би ASP.NET Core за уеб приложения? 
